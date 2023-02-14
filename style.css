@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.header::before {
+  content: "";
+  background-image: url(./assets/images/logo.svg);
+  width: 65px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.ul-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.ul-list a {
+  text-decoration: none;
+  color: hsl(236deg, 13%, 42%);
+}
+.ul-list a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+
+@media (max-width: 1200px) {
+  .header {
+    width: 90%;
+    padding-top: 2rem;
+  }
+  .header::before {
+    top: 1.3rem;
+  }
+  .burger::before {
+    content: "";
+    display: block;
+    background-image: url(./assets/images/icon-menu.svg);
+    background-position: center;
+    width: 40px;
+    height: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+  .burger-close::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(./assets/images/icon-menu-close.svg);
+    background-position: center;
+    width: 40px;
+    height: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    z-index: 1000;
+    top: 2rem;
+    right: 0rem;
+  }
+  .nav {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    max-width: 400px;
+    width: 60%;
+    height: 100vh;
+    z-index: 100;
+    box-shadow: 5px 0 15px -5px rgba(0, 0, 0, 0.8);
+    align-items: flex-start;
+    background-color: hsl(36deg, 100%, 99%);
+    padding-top: 10rem;
+  }
+  .nav .ul-list {
+    flex-direction: column;
+    padding-left: 1.5rem;
+  }
+  .overflow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.361);
+    left: -10%;
+    top: 0;
+  }
+}
+@media (min-width: 1201px) {
+  .nav {
+    display: flex !important;
+  }
+}
+.main {
+  display: flex;
+  width: 80%;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.main .first-section img {
+  width: 100%;
+}
+.main .first-section .first-article-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-top: 1rem;
+  gap: 2rem;
+}
+.main .first-section .first-article-one .h1 {
+  font-weight: 800;
+  font-size: 48px;
+}
+.main .first-section .first-article-one .first-article-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.5rem;
+  padding-right: 1rem;
+}
+.main .first-section .first-article-one .first-article-review p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.main .first-section .first-article-one .first-article-review .btn {
+  width: 60%;
+  color: hsl(36deg, 100%, 99%);
+  background-color: hsl(5deg, 85%, 63%);
+  border: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 1rem 0;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+.main .first-section .first-article-one .first-article-review .btn:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+.main .second-section {
+  background-color: hsl(240deg, 100%, 5%);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .second-section h2 {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 36px;
+  width: 85%;
+  padding: 1.5rem 0 0.5rem 0;
+}
+.main .second-section .second-article {
+  width: 85%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.392);
+  padding-top: 1.5rem;
+}
+.main .second-section .second-article .second-articles-link {
+  color: hsl(36deg, 100%, 99%);
+}
+.main .second-section .second-article .second-articles-link h3 {
+  padding-bottom: 0rem;
+}
+.main .second-section .second-article .second-articles-link:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.main .second-section .second-article .second-articles-p {
+  color: hsl(233deg, 8%, 79%);
+  padding: 1rem 0 1.5rem 0;
+  line-height: 1.5rem;
+  font-size: 15px;
+}
+.main .second-section .second-article:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: 90%;
+    flex-direction: column;
+  }
+  .main .first-section .first-article-one {
+    gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main .first-section .first-article-one .h1 {
+    font-size: 38px;
+  }
+  .main .second-section {
+    width: 100%;
+  }
+}
+.footer {
+  display: flex;
+  width: 80%;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+.footer .footer-section {
+  width: 100%;
+  display: flex;
+}
+.footer .footer-section img {
+  max-height: 127px;
+}
+.footer .footer-section .footer-article {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer .footer-section .footer-article .numbers {
+  padding-bottom: 1rem;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsla(236deg, 13%, 42%, 0.356);
+}
+.footer .footer-section .footer-article a {
+  color: hsl(240deg, 100%, 5%);
+}
+.footer .footer-section .footer-article a h3 {
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+.footer .footer-section .footer-article a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.footer .footer-section .footer-article p {
+  color: hsl(236deg, 13%, 42%);
+  line-height: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer .footer-section .footer-article {
+    padding-left: 1.5rem;
+  }
+  .footer .footer-section .footer-article h3 {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
