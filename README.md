@@ -1,0 +1,2 @@
+- Mobile / Desctop / Tablet
+- preview: https://nikitabenzin.github.io/news-homepage/
